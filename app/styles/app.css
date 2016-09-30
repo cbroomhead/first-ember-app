@@ -1,0 +1,66 @@
+@import "bootstrap";
+
+body {
+  padding-top: 20px;
+}
+
+html, body {
+    margin: 20px;
+}
+
+.chart-container {
+  height: 500px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  color: blue;
+}
+
+#overview-container{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  margin-top: 200px;
+  margin-left: 10px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shoutout {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: solid #cccccc 1px;
+  border-radius: 10px;
+  padding-left: 0px; 
+  padding-right: 0px; 
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigger {
+  font-size: 18px;
+  font-weight: bold;
+}
