@@ -15,7 +15,15 @@
       <button class="btn btn-primary btn-lg btn-block" {{action 'handleClick'}}>SUBMIT</button>
    </div>
 
-
+<div class="row">
+   <div class=col-md-1></div>
+   <div class=col-md-10>
+      {{#if errormsg}}
+         <div class="alert alert-danger">{{errormsg}}</div>
+      {{/if}}
+   </div>
+</div>
+<br/><br/>
 
 <div class="row">
    <div class=col-md-1></div>
@@ -27,13 +35,3 @@
 </div>
 <br/><br/> 
 
-
-<div class="row">
-   <div class=col-md-1></div>
-   <div class=col-md-10>
-      {{#if update}}
-      	<div class="alert alert-success">{{update}}</div>
-      {{/if}}
-   </div>
-</div>
-<br/><br/> 
