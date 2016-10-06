@@ -8,10 +8,20 @@
 </div>
 
 
-
-   <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
-      <button class="btn btn-primary btn-lg btn-block" {{action 'handleClick'}}>SUBMIT</button>
+<div class="row">
+   <div class="col-xs-1"></div>
+   <div class="col-xs-5">
+      <button id="submit" class="btn btn-primary btn-lg btn-block" {{action 'handleClick'}}>SUBMIT</button>
    </div>
+   <div class="col-xs-5">
+      <button disabled={{isDisabled}} id="reset" class="btn btn-primary btn-lg btn-block" {{action "resetEverything"}}> RESET </button>
+   </div>
+ </div>  
+
+{{#if spinner}}
+     <div id="load"><p>LOADING</p></div>
+{{/if}}
+
 
 
 
@@ -27,8 +37,8 @@
 
 
 {{#if piecharts}}
-<div class="chart-container" data-template-name="whales">
-   {{high-charts mode=mode chartOptions=chartOptions content=model theme=theme}}
+<div class="chart-container" id="chartdisplay">
+   {{high-charts mode=mode chartOptions=chartOptions content=chartData theme=theme}}
 </div>
 {{/if}}
 
@@ -42,8 +52,6 @@
       {{/if}}
    </div>
 </div>
-
-
 
 
 

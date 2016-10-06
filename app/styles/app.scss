@@ -54,18 +54,41 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
   position: relative;
-  display: block;
   margin-top: 80px;
   font-weight: 300;
 }
 
-.btn-primary {
+#submit {
   color: #ffffff;
   background-color: #ff8000;
   border: 0px;
   border-radius: 0px;
 }
 
+#reset {
+  color: #ffffff;
+  border: 0px;
+  border-radius: 0px;
+}
 
+.alert-success {
+  margin-top: 60px;
+  position: relative;
+}
+
+#chartdisplay {
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#load {
+  color: #eeeeee;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
