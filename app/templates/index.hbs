@@ -1,11 +1,9 @@
-<h1 class="title">Generation Mix App</h1>
+<h1 id='banner'>App</h1>
 
 <div class="row">
    <div class=col-md-3></div>
    <div class=col-md-6>
-      <div id="instructions" class="alert alert-warning center center">
-         <strong>Please wait while we are getting your location</strong> 
-      </div>
+         <strong id='title'>Press Submit to launch the app.</strong> 
    </div>
 </div>
 
@@ -15,15 +13,7 @@
       <button class="btn btn-primary btn-lg btn-block" {{action 'handleClick'}}>SUBMIT</button>
    </div>
 
-<div class="row">
-   <div class=col-md-1></div>
-   <div class=col-md-10>
-      {{#if errormsg}}
-         <div class="alert alert-danger">{{errormsg}}</div>
-      {{/if}}
-   </div>
-</div>
-<br/><br/>
+
 
 <div class="row">
    <div class=col-md-1></div>
@@ -34,4 +24,34 @@
    </div>
 </div>
 <br/><br/> 
+
+
+{{#if piecharts}}
+<div class="chart-container" data-template-name="whales">
+   {{high-charts mode=mode chartOptions=chartOptions content=model theme=theme}}
+</div>
+{{/if}}
+
+<br/><br/> 
+
+<div class="row">
+   <div class=col-md-1></div>
+   <div class=col-md-10>
+      {{#if errormsg}}
+         <div class="alert alert-danger bigger">{{errormsg}}</div>
+      {{/if}}
+   </div>
+</div>
+
+
+
+
+
+<br/><br/>
+
+<footer>
+   <p>Created by: Celine Broomhead</p>
+  <p>Contact information: <a href="celine.broomhead@gmail.com">
+  celine.broomhead@gmail.com</a>.</p>
+</footer>
 
