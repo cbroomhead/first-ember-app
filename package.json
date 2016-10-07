@@ -48,6 +48,7 @@
     "loader.js": "^4.0.1"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "highcharts": "^5.0.0"
   }
 }

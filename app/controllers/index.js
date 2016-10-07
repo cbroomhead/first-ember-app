@@ -21,7 +21,6 @@ export default Ember.Controller.extend({
 			this.set('piecharts', false);
 		},
 		spinnerTrue: function(){
-			console.log("INSIDE THE SPINNER");
 			this.set('spinner', true);
 			var spin = document.getElementById("load");
 			spin.toggle('true');
@@ -64,7 +63,7 @@ export default Ember.Controller.extend({
             			'Authorization': 'Token 91769eaee6281a836ce218415d151634e275b4f1'
           			}
           		}).then(function(data){
-          			that.set('spinner', false);
+          			console.log("DATA BITCH", data)
           			var name = data[0].name;
           			var abbrev = data[0].abbrev;
           			that.set('msg', `Your Balancing authority is: ${name} (${abbrev})`);
@@ -82,7 +81,8 @@ export default Ember.Controller.extend({
           		}).then(function(data){
           			if(data.statusText === "TOO MANY REQUESTS"){
           				console.log("TOO MANY REQUEST", data.statusText);
-          			}
+          			} 
+          			that.set('spinner', false);
           			var args = data.results;
          			that.send('displayCharts', args);   			
                 }).catch(function(err){
@@ -110,8 +110,7 @@ export default Ember.Controller.extend({
 				        data: []
 				      }
 			    	];
-			    that.set('piecharts', true);
-			    that.set('errormsg', 'We got something'); 
+			    that.set('piecharts', true); 
 			    args.map(function(object){
 			    	object.genmix.map(function(item){
 				    	if (item.fuel === 'other'){
@@ -128,7 +127,6 @@ export default Ember.Controller.extend({
 				        }
 			        });
 				});
-			console.log("MODELARR", modelArr);
 			that.set('chartData', modelArr);
 		},
 	},

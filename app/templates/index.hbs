@@ -11,7 +11,7 @@
 <div class="row">
    <div class="col-xs-1"></div>
    <div class="col-xs-5">
-      <button id="submit" class="btn btn-primary btn-lg btn-block" {{action 'handleClick'}}>SUBMIT</button>
+      <button id="submit" class="btn btn-primary btn-lg btn-block" {{action 'handleClick'}}>Go</button>
    </div>
    <div class="col-xs-5">
       <button disabled={{isDisabled}} id="reset" class="btn btn-primary btn-lg btn-block" {{action "resetEverything"}}> RESET </button>
@@ -19,7 +19,7 @@
  </div>  
 
 {{#if spinner}}
-     <div id="load"><p>LOADING</p></div>
+     <div id="load"><p>STILL LOADING</p></div>
 {{/if}}
 
 
@@ -29,7 +29,7 @@
    <div class=col-md-1></div>
    <div class=col-md-10>
       {{#if msg}}
-      	<div class="alert alert-success">{{msg}}</div>
+      	<div class="alert alert-success animated fadeInDown">{{msg}}</div>
       {{/if}}
    </div>
 </div>
@@ -37,9 +37,9 @@
 
 
 {{#if piecharts}}
-<div class="chart-container" id="chartdisplay">
-   {{high-charts mode=mode chartOptions=chartOptions content=chartData theme=theme}}
-</div>
+   <div class="chart-container animated slideInUp" id="chartdisplay">
+      {{high-charts mode=mode chartOptions=chartOptions content=chartData theme=theme}}
+   </div>  
 {{/if}}
 
 <br/><br/> 
